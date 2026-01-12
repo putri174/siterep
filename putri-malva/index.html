@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Foreword Library - Perpustakaan Modern</title>
+
+    <!-- Font & Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/index.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <div class="logo-icon" aria-hidden="true"><i class="fas fa-book-open"></i></div>
+                <div class="brand-title">
+                    <h1 class="font-playfair">Foreword Library</h1>
+                    <p>Perpustakaan Modern & Aesthetic</p>
+                </div>
+            </div>
+
+            <nav class="desktop-nav" aria-label="Main navigation">
+                <a href="/">Beranda</a>
+                <a href="koleksi.html">Koleksi</a>
+                <a href="member.html">Keanggotaan</a>
+                <a href="about.html">Tentang</a>
+                <a href="contact.html">Kontak</a>
+            </nav>
+
+            <div class="header-cta">
+                <button class="btn btn-primary" aria-label="Login Anggota"><i class="fas fa-user" style="margin-right:8px"></i>Login</button>
+                <button class="mobile-menu-button" id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" title="Buka menu">
+                  <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Nav -->
+        <div id="mobile-menu" class="mobile-menu container" aria-hidden="true">
+            <a href="index.html">Beranda</a>
+            <a href="koleksi.html">Koleksi</a>
+            <a href="member.html">Keanggotaan</a>
+            <a href="about.html">Tentang</a>
+            <a href="contact.html">Kontak</a>
+        </div>
+    </header>
+
+    <!-- Hero -->
+    <section id="home" class="hero" style="background-color:var(--amber-900);">
+        <div class="overlay" aria-hidden="true"></div>
+        <div class="container hero-inner">
+            <h2 class="font-playfair">Selamat Datang di <span style="color:var(--amber-300)">Foreword Library</span></h2>
+            <p>Temukan dunia pengetahuan di perpustakaan modern dengan koleksi terlengkap dan suasana yang nyaman untuk membaca, belajar, dan berdiskusi.</p>
+            <div class="hero-ctas">
+                <button class="cta-primary"><i class="fas fa-book" style="margin-right:8px"></i>Jelajahi Koleksi</button>
+                <button class="cta-outline"><i class="fas fa-user-plus" style="margin-right:8px"></i>Daftar Anggota</button>
+            </div>
+        </div>
+        <div class="hero-bg-deco" aria-hidden="true"></div>
+    </section>
+
+    <!-- Stats -->
+    <section class="stats">
+        <div class="container">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="value">50,000+</div>
+                    <div class="label">Judul Buku</div>
+                </div>
+                <div class="stat-item">
+                    <div class="value">200+</div>
+                    <div class="label">Majalah & Jurnal</div>
+                </div>
+                <div class="stat-item">
+                    <div class="value">15</div>
+                    <div class="label">Ruang Baca</div>
+                </div>
+                <div class="stat-item">
+                    <div class="value">10,000+</div>
+                    <div class="label">Anggota Aktif</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Koleksi -->
+    <section id="koleksi" class="section">
+        <div class="container">
+            <h2 class="section-title font-playfair">Koleksi Unggulan</h2>
+
+            <div class="collections-grid" style="margin-top:18px">
+                <!-- Card 1 -->
+                <div class="book-card">
+                    <div class="card-top" style="background:linear-gradient(90deg,var(--amber-700),var(--amber-900));">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+                                <h3 style="margin:0; font-weight:700;">Sastra Klasik</h3>
+                                <span class="badge" style="background:#fff2e6; color:var(--amber-800)">Populer</span>
+                            </div>
+                            <p class="muted">Koleksi karya sastra klasik dari penulis terkenal dunia.</p>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;margin-top:14px;color:var(--muted);font-size:13px">
+                            <span><i class="fas fa-book" style="margin-right:6px"></i>1,200 judul</span>
+                            <span><i class="fas fa-eye" style="margin-right:6px"></i>Tersedia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="book-card">
+                    <div class="card-top" style="background:linear-gradient(90deg,#1e40af,#1e3a8a);">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+                                <h3 style="margin:0; font-weight:700;">Sains & Teknologi</h3>
+                                <span class="badge" style="background:#eef2ff; color:#1e3a8a">Baru</span>
+                            </div>
+                            <p class="muted">Literatur terkini di bidang sains, teknologi, dan penelitian.</p>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;margin-top:14px;color:var(--muted);font-size:13px">
+                            <span><i class="fas fa-book" style="margin-right:6px"></i>3,500 judul</span>
+                            <span><i class="fas fa-eye" style="margin-right:6px"></i>Tersedia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="book-card">
+                    <div class="card-top" style="background:linear-gradient(90deg,#15803d,#166534);">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+                                <h3 style="margin:0; font-weight:700;">Seni & Desain</h3>
+                                <span class="badge" style="background:#ecfdf5;color:#166534">Populer</span>
+                            </div>
+                            <p class="muted">Buku seni, desain grafis, fotografi, dan arsitektur.</p>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;margin-top:14px;color:var(--muted);font-size:13px">
+                            <span><i class="fas fa-book" style="margin-right:6px"></i>2,100 judul</span>
+                            <span><i class="fas fa-eye" style="margin-right:6px"></i>Tersedia</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="book-card">
+                    <div class="card-top" style="background:linear-gradient(90deg,#6d28d9,#5b21b6);">
+                        <i class="fas fa-history"></i>
+                    </div>
+                    <div class="card-body">
+                        <div>
+                            <div style="display:flex; justify-content:space-between; align-items:flex-start; margin-bottom:8px;">
+                                <h3 style="margin:0; font-weight:700;">Sejarah & Budaya</h3>
+                                <span class="badge" style="background:#f3e8ff;color:#5b21b6">Klasik</span>
+                            </div>
+                            <p class="muted">Koleksi sejarah dunia, biografi, dan budaya lokal.</p>
+                        </div>
+                        <div style="display:flex;justify-content:space-between;margin-top:14px;color:var(--muted);font-size:13px">
+                            <span><i class="fas fa-book" style="margin-right:6px"></i>1,800 judul</span>
+                            <span><i class="fas fa-eye" style="margin-right:6px"></i>Tersedia</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collections-actions">
+                <button class="cta-outline" style="margin-top:20px;"><i class="fas fa-arrow-right" style="margin-left:8px"></i>Lihat Semua Koleksi</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fasilitas -->
+    <section id="fasilitas" style="background:#f3f4f6;padding:48px 0;">
+        <div class="container">
+            <h2 class="section-title font-playfair" style="color:var(--text)">Fasilitas Kami</h2>
+
+            <div class="facilities-grid" style="margin-top:18px">
+                <div class="facility">
+                    <div class="icon" style="background:rgba(250,204,21,0.12); color:var(--amber-800)"><i class="fas fa-users" style="font-size:22px"></i></div>
+                    <h3 style="margin:8px 0 8px;font-weight:700">Ruang Baca Nyaman</h3>
+                    <p class="muted">Ruang baca dengan desain ergonomis, pencahayaan optimal, dan suasana tenang untuk pengalaman membaca yang maksimal.</p>
+                </div>
+
+                <div class="facility">
+                    <div class="icon" style="background:rgba(59,130,246,0.12); color:#2563eb"><i class="fas fa-laptop" style="font-size:22px"></i></div>
+                    <h3 style="margin:8px 0 8px;font-weight:700">Akses Digital</h3>
+                    <p class="muted">Akses ke perpustakaan digital, e-book, jurnal online, dan database penelitian dari berbagai disiplin ilmu.</p>
+                </div>
+
+                <div class="facility">
+                    <div class="icon" style="background:rgba(16,185,129,0.12); color:#059669"><i class="fas fa-coffee" style="font-size:22px"></i></div>
+                    <h3 style="margin:8px 0 8px;font-weight:700">Library Cafe</h3>
+                    <p class="muted">Cafe dengan minuman dan snack ringan untuk menemani aktivitas membaca dan belajar di perpustakaan.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About & Contact -->
+    <section style="background:white;padding:48px 0;">
+        <div class="container about-contact">
+            <div id="tentang">
+                <h2 class="font-playfair" style="font-size:26px;margin:0 0 12px">Tentang Foreword Library</h2>
+                <p class="muted">Foreword Library didirikan pada tahun 2010 dengan visi menjadi pusat pengetahuan dan budaya yang menginspirasi masyarakat. Dengan koleksi lebih dari 50.000 judul buku dan fasilitas modern, kami berkomitmen untuk menyediakan akses informasi yang luas bagi semua kalangan.</p>
+                <p class="muted">Kami tidak hanya menyediakan buku, tetapi juga menjadi ruang komunitas untuk diskusi, workshop, dan kegiatan literasi lainnya. Foreword Library adalah tempat di mana setiap kata memiliki arti, dan setiap pembaca menemukan dunianya sendiri.</p>
+
+                <div class="about-stats">
+                    <div class="about-stat">
+                        <div style="font-weight:800;color:var(--amber-900)">10+</div>
+                        <div style="font-size:13px;color:var(--muted)">Tahun Berpengalaman</div>
+                    </div>
+                    <div class="about-stat">
+                        <div style="font-weight:800;color:var(--amber-900)">50+</div>
+                        <div style="font-size:13px;color:var(--muted)">Kegiatan Tahunan</div>
+                    </div>
+                    <div class="about-stat">
+                        <div style="font-weight:800;color:var(--amber-900)">24/7</div>
+                        <div style="font-size:13px;color:var(--muted)">Akses Digital</div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="kontak" class="contact-card">
+                <h2 class="font-playfair" style="font-size:22px;margin:0 0 12px">Hubungi Kami</h2>
+
+                <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:12px">
+                    <div style="background:rgba(250,204,21,0.12);padding:10px;border-radius:8px;color:var(--amber-800)"><i class="fas fa-map-marker-alt"></i></div>
+                    <div>
+                        <h4 style="margin:0;font-weight:700">Alamat</h4>
+                        <p class="muted" style="margin:6px 0 0">Jalan Pengetahuan No. 123, Kota Literasi, 10110</p>
+                    </div>
+                </div>
+
+                <div style="display:flex;gap:12px;align-items:flex-start;margin-bottom:12px">
+                    <div style="background:rgba(250,204,21,0.12);padding:10px;border-radius:8px;color:var(--amber-800)"><i class="fas fa-clock"></i></div>
+                    <div>
+                        <h4 style="margin:0;font-weight:700">Jam Operasional</h4>
+                        <p class="muted" style="margin:6px 0 0">Senin - Jumat: 08:00 - 21:00<br>Sabtu - Minggu: 09:00 - 17:00</p>
+                    </div>
+                </div>
+
+                <div style="display:flex;gap:12px;align-items:flex-start">
+                    <div style="background:rgba(250,204,21,0.12);padding:10px;border-radius:8px;color:var(--amber-800)"><i class="fas fa-phone"></i></div>
+                    <div>
+                        <h4 style="margin:0;font-weight:700">Telepon & Email</h4>
+                        <p class="muted" style="margin:6px 0 0">(021) 1234-5678<br>info@forewordlibrary.id</p>
+                    </div>
+                </div>
+
+                <div style="border-top:1px solid #eee;padding-top:12px;margin-top:12px">
+                    <h4 style="margin:0 0 8px;font-weight:700">Berlangganan Newsletter</h4>
+                    <div class="newsletter">
+                        <input type="email" placeholder="Email Anda" aria-label="Email Anda">
+                        <button aria-label="Kirim Newsletter"><i class="fas fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr;gap:18px">
+        <div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <div style="background:var(--amber-600);padding:8px;border-radius:8px;color:white"><i class="fas fa-book-open"></i></div>
+            <div style="font-family:'Playfair Display',serif;font-weight:700">Foreword Library</div>
+          </div>
+          <p style="color:rgba(255,255,255,0.85);max-width:380px">"Ruangan milik sendiri" untuk melarikan diri ke dunia lain, sambil menggenggam cangkir dan terlepas dari gangguan duniawi.</p>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 8px;color:rgba(255,255,255,0.95)">Tautan Cepat</h4>
+          <ul style="list-style:none;padding:0;margin:0;color:rgba(255,255,255,0.8)">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="koleksi.html">Koleksi Buku</a></li>
+            <li><a href="anggota.html">Keanggotaan</a></li>
+            <li><a href="kontak.html">Kontak & Lokasi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 8px;color:rgba(255,255,255,0.95)">Lokasi Kami</h4>
+          <ul style="list-style:none;padding:0;margin:0;color:rgba(255,255,255,0.8)">
+            <li style="margin-bottom:8px"><i class="fas fa-map-marker-alt" style="margin-right:8px;color:var(--amber-300)"></i>Kemang: Jl. Kemang Raya No. 12</li>
+            <li style="margin-bottom:8px"><i class="fas fa-map-marker-alt" style="margin-right:8px;color:var(--amber-300)"></i>Senopati: Jl. Suryo No. 24</li>
+            <li><i class="fas fa-map-marker-alt" style="margin-right:8px;color:var(--amber-300)"></i>Pondok Indah: Mall PI, Lt. 3</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 8px;color:rgba(255,255,255,0.95)">Tetap Terhubung</h4>
+          <div style="margin-bottom:12px">
+            <a href="#" class="socials" style="margin-right:6px"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="socials" style="margin-right:6px"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="socials" style="margin-right:6px"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="socials"><i class="fab fa-tiktok"></i></a>
+          </div>
+          <div style="color:rgba(255,255,255,0.8)"><i class="fas fa-envelope" style="color:var(--amber-300);margin-right:8px"></i>hello@forewordlibrary.id</div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,0.04);margin-top:18px;padding-top:16px;text-align:center;color:rgba(255,255,255,0.6)">
+        &copy; 2023 Foreword Library. Semua hak dilindungi. | "Ruangan milik sendiri" bagi setiap pembaca.
+      </div>
+    </div>
+  </footer>
+
+    <!-- Back to Top -->
+    <button id="back-to-top" title="Ke atas"><i class="fas fa-arrow-up"></i></button>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Kontak Kami - Foreword Library</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/contact.css">
+</head>
+<body>
+
+  <!-- Header (dari member.html) -->
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="logo-icon"><i class="fas fa-book-open"></i></div>
+        <div>
+          <h1 class="font-playfair">Foreword Library</h1>
+          <p>Perpustakaan Modern &amp; Aesthetic</p>
+        </div>
+      </a>
+
+      <nav class="desktop" aria-label="Main navigation">
+            <a href="index.html">Beranda</a>
+            <a href="koleksi.html">Koleksi</a>
+            <a href="member.html">Keanggotaan</a>
+            <a href="about.html">Tentang</a>
+            <a href="contact.html" class="active">Kontak</a>
+      </nav>
+
+      <div class="header-cta">
+        <button class="btn btn-primary"><i class="fas fa-user" style="margin-right:8px"></i>Login</button>
+        <button class="mobile-toggle" id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" title="Buka menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu container" aria-hidden="true">
+      <a href="index.html">Beranda</a>
+      <a href="koleksi.html">Koleksi</a>
+      <a href="member.html">Keanggotaan</a>
+      <a href="about.html">Tentang</a>
+      <a href="contact.html" style="color:var(--amber-900)">Kontak</a>
+    </div>
+  </header>
+
+  <!-- Hero (dari member.html) -->
+  <section class="hero">
+    <div class="pattern" aria-hidden="true"></div>
+    <div class="container text-center">
+      <h1 class="font-playfair">Bergabung dengan Komunitas Kami</h1>
+      <p class="lead">Temukan "ruangan sendiri" Anda dan akses dunia literasi tanpa batas</p>
+      <div class="decor" aria-hidden="true"></div>
+      <p style="max-width:820px;margin:12px auto 0;color:rgba(255,255,255,0.95)">Dengan menjadi anggota Foreword Library, Anda tidak hanya mendapatkan akses ke koleksi buku terkurasi, tetapi juga menjadi bagian dari komunitas pembaca yang saling terhubung melalui kecintaan pada kata-kata.</p>
+    </div>
+  </section>
+
+  <!-- Konten Kontak -->
+  <section>
+    <div class="container">
+      <div style="max-width:1100px;margin:0 auto">
+        <div style="display:grid;grid-template-columns:1fr;gap:24px">
+          <!-- left: branches + map -->
+          <div>
+            <h2 class="font-playfair" style="font-size:28px;margin-bottom:8px">Mari Terhubung</h2>
+            <p class="muted" style="margin-bottom:18px">Foreword Library hadir di beberapa lokasi di Jakarta. Temukan cabang terdekat atau hubungi kami melalui berbagai saluran yang tersedia.</p>
+
+            <!-- branch tabs -->
+            <div>
+              <h3 style="font-weight:700;margin-bottom:10px">Lokasi Cabang Kami</h3>
+              <div class="branch-tabs" id="branch-tabs">
+                <button class="branch-tab active" data-branch="kemang">Kemang</button>
+                <button class="branch-tab" data-branch="senopati">Senopati</button>
+                <button class="branch-tab" data-branch="pondok-indah">Pondok Indah</button>
+                <button class="branch-tab" data-branch="pluit">Pluit</button>
+              </div>
+
+              <!-- branch details -->
+              <div id="branch-kemang" class="branch-detail">
+                <div style="display:grid;grid-template-columns:1fr;gap:12px">
+                  <div class="contact-card card">
+                    <div class="card-title"><i class="fas fa-map-marker-alt" style="color:var(--amber-700)"></i> <strong>Alamat</strong></div>
+                    <p>Jl. Kemang Raya No. 12<br>Kemang, Jakarta Selatan<br>DKI Jakarta 12730</p>
+                    <p style="margin-top:10px"><a href="https://maps.google.com/?q=Jl.+Kemang+Raya+No.+12,+Jakarta+Selatan" target="_blank" style="color:var(--amber-700)">Dapatkan Petunjuk Arah <i class="fas fa-directions" style="margin-left:6px"></i></a></p>
+                  </div>
+
+                  <div class="contact-card card">
+                    <div class="card-title"><i class="fas fa-clock" style="color:var(--amber-700)"></i> <strong>Jam Operasional</strong></div>
+                    <ul style="margin-top:6px;list-style:none;padding:0;color:var(--text)">
+                      <li style="display:flex;justify-content:space-between"><span>Senin - Kamis:</span><span>08:00 - 21:00</span></li>
+                      <li style="display:flex;justify-content:space-between"><span>Jumat:</span><span>08:00 - 20:00</span></li>
+                      <li style="display:flex;justify-content:space-between"><span>Sabtu - Minggu:</span><span>09:00 - 17:00</span></li>
+                      <li style="display:flex;justify-content:space-between;border-top:1px solid #f3e8d6;padding-top:8px;margin-top:8px"><span>Area Baca 24 Jam:</span><span style="color:green">Tersedia</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="branch-senopati" class="branch-detail hidden">
+                <div style="display:grid;grid-template-columns:1fr;gap:12px">
+                  <div class="contact-card card">
+                    <div class="card-title"><i class="fas fa-map-marker-alt" style="color:var(--amber-700)"></i> <strong>Alamat</strong></div>
+                    <p>Jl. Suryo No. 24<br>Senopati, Jakarta Selatan<br>DKI Jakarta 12190</p>
+                    <p style="margin-top:10px"><a href="https://maps.google.com/?q=Jl.+Suryo+No.+24,+Jakarta+Selatan" target="_blank" style="color:var(--amber-700)">Dapatkan Petunjuk Arah <i class="fas fa-directions" style="margin-left:6px"></i></a></p>
+                  </div>
+                  <div class="contact-card card">
+                    <div class="card-title"><i class="fas fa-clock" style="color:var(--amber-700)"></i> <strong>Jam Operasional</strong></div>
+                    <ul style="margin-top:6px;list-style:none;padding:0;color:var(--text)">
+                      <li style="display:flex;justify-content:space-between"><span>Senin - Jumat:</span><span>09:00 - 20:00</span></li>
+                      <li style="display:flex;justify-content:space-between"><span>Sabtu:</span><span>09:00 - 18:00</span></li>
+                      <li style="display:flex;justify-content:space-between"><span>Minggu:</span><span>10:00 - 16:00</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="branch-pondok-indah" class="branch-detail hidden">
+                <div style="display:grid;grid-template-columns:1fr;gap:12px">
+                  <div class="contact-card card">
+                    <div class="card-title"><i class="fas fa-map-marker-alt" style="color:var(--amber-700)"></i> <strong>Alamat</strong></div>
+                    <p>Mall Pondok Indah, Lt. 3, No. 315<br>Jl. Metro Pondok Indah<br>Jakarta Selatan 12310</p>
+                    <p style="margin-top:10px"><a href="https://maps.google.com/?q=Mall+Pondok+Indah,+Jakarta" target="_blank" style="color:var(--amber-700)">Dapatkan Petunjuk Arah <i class="fas fa-directions" style="margin-left:6px"></i></a></p>
+                  </div>
+                  <div class="contact-card card">
+                    <div class="card-title"><i class="fas fa-clock" style="color:var(--amber-700)"></i> <strong>Jam Operasional</strong></div>
+                    <ul style="margin-top:6px;list-style:none;padding:0;color:var(--text)">
+                      <li style="display:flex;justify-content:space-between"><span>Setiap Hari:</span><span>10:00 - 22:00</span></li>
+                      <li style="display:flex;justify-content:space-between;border-top:1px solid #f3e8d6;padding-top:8px;margin-top:8px"><span>Library Cafe:</span><span style="color:green">Tersedia</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="branch-pluit" class="branch-detail hidden">
+                <div style="display:grid;grid-template-columns:1fr;gap:12px">
+                  <div class="contact-card card">
+                    <div class="card-title"><i class="fas fa-map-marker-alt" style="color:var(--amber-700)"></i> <strong>Alamat</strong></div>
+                    <p>Jl. Pluit Indah No. 8<br>Pluit, Jakarta Utara<br>DKI Jakarta 14450</p>
+                    <p style="margin-top:10px"><a href="https://maps.google.com/?q=Jl.+Pluit+Indah+No.+8,+Jakarta+Utara" target="_blank" style="color:var(--amber-700)">Dapatkan Petunjuk Arah <i class="fas fa-directions" style="margin-left:6px"></i></a></p>
+                  </div>
+                  <div class="contact-card card">
+                    <div class="card-title"><i class="fas fa-clock" style="color:var(--amber-700)"></i> <strong>Jam Operasional</strong></div>
+                    <ul style="margin-top:6px;list-style:none;padding:0;color:var(--text)">
+                      <li style="display:flex;justify-content:space-between"><span>Senin - Jumat:</span><span>08:00 - 19:00</span></li>
+                      <li style="display:flex;justify-content:space-between"><span>Sabtu:</span><span>09:00 - 17:00</span></li>
+                      <li style="display:flex;justify-content:space-between"><span>Minggu:</span><span>Tutup</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Map -->
+              <div style="margin-top:20px">
+                <h3 style="font-weight:700;margin-bottom:10px">Lokasi di Peta</h3>
+                <div class="map-container" style="height:320px">
+                  <div class="map-placeholder" id="map-placeholder">
+                    <div>
+                      <i class="fas fa-map-marked-alt" style="font-size:36px;color:var(--amber-700);margin-bottom:8px;display:block"></i>
+                      <div style="font-weight:700">Peta Lokasi Foreword Library Kemang</div>
+                      <div style="color:var(--muted);margin-top:6px">Jl. Kemang Raya No. 12, Jakarta Selatan</div>
+                    </div>
+                  </div>
+                </div>
+                <p class="muted" style="margin-top:10px">*Gunakan tab di atas untuk melihat lokasi cabang lainnya</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- right: contact form -->
+          <div>
+            <div class="card contact-card">
+              <h3 class="font-playfair" style="font-size:20px;margin-bottom:12px">Kirim Pesan</h3>
+              <p class="muted" style="margin-bottom:12px">Punya pertanyaan atau ingin memberikan saran? Kirim pesan kepada kami dan tim kami akan menghubungi Anda dalam 1-2 hari kerja.</p>
+
+              <form id="contact-form">
+                <div class="form-group">
+                  <label for="name">Nama Lengkap</label>
+                  <input id="name" type="text" required placeholder="Nama Anda">
+                </div>
+
+                <div class="form-group">
+                  <label for="email">Email</label>
+                  <input id="email" type="email" required placeholder="email@contoh.com">
+                </div>
+
+                <div class="form-group">
+                  <label for="phone">Nomor Telepon (Opsional)</label>
+                  <input id="phone" type="tel" placeholder="08xx-xxxx-xxxx">
+                </div>
+
+                <div class="form-group">
+                  <label for="subject">Subjek</label>
+                  <select id="subject" required>
+                    <option value="" disabled selected>Pilih subjek pesan</option>
+                    <option value="koleksi">Pertanyaan tentang Koleksi</option>
+                    <option value="anggota">Keanggotaan & Pendaftaran</option>
+                    <option value="acara">Acara & Kegiatan</option>
+                    <option value="donasi">Donasi Buku</option>
+                    <option value="saran">Kritik & Saran</option>
+                    <option value="lainnya">Lainnya</option>
+                  </select>
+                </div>
+
+                <div class="form-group">
+                  <label for="message">Pesan</label>
+                  <textarea id="message" rows="5" required placeholder="Tulis pesan Anda..."></textarea>
+                </div>
+
+                <div class="form-group" style="display:flex;align-items:center;gap:8px">
+                  <input id="newsletter" type="checkbox">
+                  <label for="newsletter" style="margin:0">Saya ingin berlangganan newsletter Foreword Library</label>
+                </div>
+
+                <button type="submit" class="btn btn-primary" style="width:100%;display:flex;align-items:center;justify-content:center;gap:8px;padding:12px;border-radius:10px">
+                  <i class="fas fa-paper-plane"></i> Kirim Pesan
+                </button>
+              </form>
+
+              <div id="form-success" style="display:none;margin-top:16px;padding:12px;background:#ecfdf5;border:1px solid #bbf7d0;border-radius:8px;color:#065f46">
+                <div style="display:flex;gap:12px;align-items:center">
+                  <i class="fas fa-check-circle" style="font-size:20px;color:#059669"></i>
+                  <div>
+                    <div style="font-weight:700">Pesan Terkirim!</div>
+                    <div style="font-size:13px;color:var(--muted)">Terima kasih telah menghubungi Foreword Library. Tim kami akan merespons pesan Anda dalam 1-2 hari kerja.</div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Saluran Lainnya -->
+  <section>
+    <div class="container">
+      <div class="text-center" style="max-width:980px;margin:0 auto 18px">
+        <h2 class="font-playfair" style="font-size:26px">Saluran Lainnya</h2>
+        <p class="muted" style="margin-top:8px">Anda juga dapat menghubungi kami melalui saluran-saluran berikut</p>
+      </div>
+
+      <div style="max-width:980px;margin:0 auto;display:grid;grid-template-columns:1fr;gap:18px">
+        <div class="small-card">
+          <div class="icon-round"><i class="fas fa-phone-alt" style="font-size:20px"></i></div>
+          <h3 style="margin-bottom:8px">Telepon & Email</h3>
+          <p class="muted">Telepon Umum</p>
+          <div style="font-weight:700;margin-bottom:8px">(021) 1234-5678</div>
+          <p class="muted">WhatsApp</p>
+          <div style="font-weight:700;margin-bottom:8px">0812-3456-7890</div>
+          <p class="muted">Email</p>
+          <div style="font-weight:700">info@forewordlibrary.id</div>
+        </div>
+
+        <div class="small-card">
+          <div class="icon-round" style="background:#ffdca8"><i class="fas fa-hashtag" style="font-size:20px;color:var(--amber-900)"></i></div>
+          <h3 style="margin-bottom:8px">Media Sosial</h3>
+          <p class="muted" style="margin-bottom:8px">Ikuti kami untuk informasi terbaru tentang koleksi, acara, dan kegiatan literasi.</p>
+          <div style="display:flex;gap:10px;justify-content:center;margin-bottom:8px">
+            <a href="#" style="width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#e6f2ff;color:#1e3a8a"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" style="width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#ffe6f0;color:#be185d"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="width:40px;height:40px;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;background:#eef2ff;color:#1d4ed8"><i class="fab fa-twitter"></i></a>
+          </div>
+          <div style="font-weight:700;color:var(--amber-900)">#ForewordLibrary #RuanganSendiri</div>
+        </div>
+
+        <div class="small-card">
+          <div class="icon-round" style="background:#ffeecf"><i class="fas fa-question-circle" style="font-size:20px"></i></div>
+          <h3 style="margin-bottom:8px">Pertanyaan Umum</h3>
+          <p class="muted" style="margin-bottom:10px">Temukan jawaban cepat untuk pertanyaan yang sering diajukan.</p>
+          <div style="text-align:left">
+            <div style="display:flex;gap:8px;margin-bottom:6px"><i class="fas fa-book" style="color:var(--amber-700);margin-top:4px"></i><div>Bagaimana cara menjadi anggota?</div></div>
+            <div style="display:flex;gap:8px;margin-bottom:6px"><i class="fas fa-clock" style="color:var(--amber-700);margin-top:4px"></i><div>Apakah ada area baca 24 jam?</div></div>
+            <div style="display:flex;gap:8px"><i class="fas fa-coffee" style="color:var(--amber-700);margin-top:4px"></i><div>Bolehkah membawa makanan/minuman?</div></div>
+          </div>
+          <p style="margin-top:12px"><a href="faq.html" style="color:var(--amber-700);font-weight:700">Lihat FAQ Lengkap <i class="fas fa-arrow-right" style="margin-left:6px"></i></a></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Newsletter CTA -->
+  <section class="cta" style="margin-top:18px">
+    <div class="container text-center">
+      <h2 class="font-playfair" style="font-size:22px;margin-bottom:8px">Tetap Terhubung dengan Dunia Kata</h2>
+      <p class="muted" style="margin-bottom:12px">Dapatkan info koleksi baru, acara literasi, dan penawaran khusus langsung ke email Anda.</p>
+      <div class="input-inline" style="justify-content:center;margin:0 auto">
+        <input type="email" placeholder="Email Anda" style="padding:12px;border-radius:10px;border:0;max-width:420px;width:100%">
+        <button class="btn btn-primary" style="padding:12px 18px;border-radius:10px">Berlangganan</button>
+      </div>
+      <p style="margin-top:12px;color:rgba(255,255,255,0.9)">Dengan berlangganan, Anda menyetujui kebijakan privasi kami. Anda dapat berhenti berlangganan kapan saja.</p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div style="display:grid;gap:18px">
+        <div style="display:flex;gap:12px;align-items:center">
+          <div class="logo-icon" style="width:44px;height:44px;display:inline-flex;align-items:center;justify-content:center"><i class="fas fa-book-open"></i></div>
+          <div>
+            <div class="font-playfair" style="font-weight:700">Foreword Library</div>
+            <div style="color:rgba(255,255,255,0.85);max-width:360px">"Ruangan milik sendiri" untuk melarikan diri ke dunia lain, sambil menggenggam cangkir dan terlepas dari gangguan duniawi.</div>
+          </div>
+        </div>
+
+        <div style="display:flex;flex-wrap:wrap;gap:24px;justify-content:space-between">
+          <div>
+            <div style="font-weight:700;margin-bottom:8px">Tautan Cepat</div>
+            <div style="color:rgba(255,255,255,0.9)"><a href="index.html">Beranda</a> • <a href="tentang.html">Tentang Kami</a> • <a href="koleksi.html">Koleksi</a></div>
+          </div>
+
+          <div>
+            <div style="font-weight:700;margin-bottom:8px">Jam Operasional</div>
+            <div style="color:rgba(255,255,255,0.9)"><div>Senin - Kamis: 08:00 - 21:00</div><div>Jumat: 08:00 - 20:00</div></div>
+          </div>
+
+          <div>
+            <div style="font-weight:700;margin-bottom:8px">Kontak Cepat</div>
+            <div style="color:rgba(255,255,255,0.9)">(021) 1234-5678 • info@forewordlibrary.id</div>
+          </div>
+        </div>
+
+        <div style="border-top:1px solid rgba(255,255,255,0.04);padding-top:12px;text-align:center;color:rgba(255,255,255,0.6)">
+          &copy; 2023 Foreword Library. Semua hak dilindungi. | <a href="privacy.html">Kebijakan Privasi</a> | <a href="terms.html">Syarat & Ketentuan</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Ke atas"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    // Jika Anda memakai skrip yang sama seperti sebelumnya, tidak perlu perubahan.
+    // Contoh singkat: toggle mobile menu
+    const mobileBtn = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    if (mobileBtn){
+      mobileBtn.addEventListener('click', () => {
+        const expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+        mobileBtn.setAttribute('aria-expanded', String(!expanded));
+        if (mobileMenu.style.display === 'block') {
+          mobileMenu.style.display = 'none';
+          mobileMenu.setAttribute('aria-hidden','true');
+        } else {
+          mobileMenu.style.display = 'block';
+          mobileMenu.setAttribute('aria-hidden','false');
+        }
+      });
+    }
+  </script>
+</body>
+</html>

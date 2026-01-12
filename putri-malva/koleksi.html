@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Koleksi Buku - Foreword Library</title>
+
+  <!-- Icon & Font -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/koleksi.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="logo-icon"><i class="fas fa-book-open"></i></div>
+        <div>
+          <h1 class="font-playfair">Foreword Library</h1>
+          <p>Perpustakaan Modern & Aesthetic</p>
+        </div>
+      </a>
+
+      <nav class="desktop" aria-label="Main navigation">
+        <a href="index.html">Beranda</a>
+        <a href="koleksi.html" class="active">Koleksi</a>
+        <a href="member.html">Keanggotaan</a>
+        <a href="about.html">Tentang</a>
+        <a href="contact.html">Kontak</a>
+      </nav>
+
+      <div class="header-cta">
+        <button class="btn btn-primary"><i class="fas fa-user" style="margin-right:8px"></i>Login</button>
+        <button class="mobile-toggle" id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" title="Buka menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu container" aria-hidden="true">
+      <a href="index.html">Beranda</a>
+      <a href="koleksi.html" style="color:var(--amber-900)">Koleksi</a>
+      <a href="member.html">Keanggotaan</a>
+      <a href="about.html">Tentang</a>
+      <a href="contact.html">Kontak</a>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <h1 class="font-playfair">Jelajahi Koleksi Kami</h1>
+      <p class="lead">Temukan "ruangan sendiri" Anda di antara 50,000+ buku terkurasi dari seluruh dunia</p>
+      <div class="decor" aria-hidden="true"></div>
+      <p style="max-width:760px;margin:12px auto 0">Dari sastra klasik hingga karya kontemporer, dari penelitian akademis hingga cerita anak. Temukan buku yang akan membawa Anda dalam perjalanan tak terlupakan.</p>
+    </div>
+  </section>
+
+  <!-- Search & Filters -->
+  <section class="container" style="margin-top:-28px">
+    <div class="search-section card">
+      <div>
+        <div class="search-row">
+          <div style="position:relative;flex:1">
+            <input id="search-input" class="search-input" type="text" placeholder="Cari judul buku, penulis, ISBN, atau kata kunci...">
+            <div style="position:absolute;left:12px;top:50%;transform:translateY(-50%);color:var(--muted)"><i class="fas fa-search"></i></div>
+          </div>
+          <button id="search-button" class="search-button">Cari</button>
+        </div>
+
+        <div class="quick-buttons" style="margin-top:8px">
+          <span style="color:var(--muted);font-size:14px;margin-right:8px">Pencarian cepat:</span>
+          <button class="filter-quick" data-search="sastra indonesia">Sastra Indonesia</button>
+          <button class="filter-quick" data-search="fiksi ilmiah">Fiksi Ilmiah</button>
+          <button class="filter-quick" data-search="novel terbaru">Novel Terbaru</button>
+          <button class="filter-quick" data-search="sejarah dunia">Sejarah Dunia</button>
+        </div>
+
+        <div class="filters-row">
+          <div>
+            <h3 style="margin:6px 0 8px">Filter Koleksi</h3>
+            <div class="filter-buttons">
+              <button class="filter-button active" data-filter="all">Semua</button>
+              <button class="filter-button" data-filter="available">Tersedia</button>
+              <button class="filter-button" data-filter="popular">Populer</button>
+              <button class="filter-button" data-filter="new">Baru</button>
+            </div>
+          </div>
+          <div style="display:flex;align-items:center;gap:8px">
+            <span style="color:var(--muted)">Urutkan:</span>
+            <select id="sort-select" class="sort-select">
+              <option value="relevance">Relevansi</option>
+              <option value="title-asc">Judul (A-Z)</option>
+              <option value="title-desc">Judul (Z-A)</option>
+              <option value="author-asc">Penulis (A-Z)</option>
+              <option value="year-desc">Tahun Terbit (Terbaru)</option>
+              <option value="year-asc">Tahun Terbit (Terlama)</option>
+              <option value="popularity">Popularitas</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Main Layout -->
+  <section class="container" style="margin-top:18px">
+    <div class="layout">
+
+      <!-- Sidebar -->
+      <aside class="sidebar">
+        <div class="card">
+          <h3>Kategori</h3>
+          <div style="margin-top:12px">
+            <div class="checkbox-line"><label><input type="checkbox" class="category-filter" value="Fiksi" checked> Fiksi</label><span class="muted">12,450</span></div>
+            <div class="checkbox-line"><label><input type="checkbox" class="category-filter" value="Non-Fiksi" checked> Non-Fiksi</label><span class="muted">8,720</span></div>
+            <div class="checkbox-line"><label><input type="checkbox" class="category-filter" value="Sains" checked> Sains & Teknologi</label><span class="muted">5,340</span></div>
+            <div class="checkbox-line"><label><input type="checkbox" class="category-filter" value="Sejarah" checked> Sejarah</label><span class="muted">4,210</span></div>
+            <div class="checkbox-line"><label><input type="checkbox" class="category-filter" value="Seni" checked> Seni & Desain</label><span class="muted">3,150</span></div>
+            <div class="checkbox-line"><label><input type="checkbox" class="category-filter" value="Bisnis" checked> Bisnis & Ekonomi</label><span class="muted">2,870</span></div>
+            <div class="checkbox-line"><label><input type="checkbox" class="category-filter" value="Anak" checked> Buku Anak</label><span class="muted">6,320</span></div>
+          </div>
+
+          <h3 style="margin-top:14px">Bahasa</h3>
+          <div style="margin-top:8px">
+            <div class="checkbox-line"><label><input type="checkbox" class="language-filter" value="Indonesia" checked> Indonesia</label><span class="muted">28,450</span></div>
+            <div class="checkbox-line"><label><input type="checkbox" class="language-filter" value="Inggris" checked> Inggris</label><span class="muted">18,720</span></div>
+            <div class="checkbox-line"><label><input type="checkbox" class="language-filter" value="Lainnya" checked> Lainnya</label><span class="muted">2,830</span></div>
+          </div>
+
+          <h3 style="margin-top:14px">Tahun Terbit</h3>
+          <div style="display:flex;gap:8px;align-items:center;margin-top:8px">
+            <input id="year-from" type="number" min="1900" max="2023" value="1900" style="width:100%;padding:8px;border:1px solid #e5e7eb;border-radius:8px">
+            <input id="year-to" type="number" min="1900" max="2023" value="2023" style="width:100%;padding:8px;border:1px solid #e5e7eb;border-radius:8px">
+          </div>
+
+          <div style="margin-top:12px;display:flex;gap:8px">
+            <button id="apply-filters" class="btn btn-primary" style="flex:1">Terapkan Filter</button>
+            <button id="reset-filters" class="btn" style="background:#f3f4f6;flex:1">Reset</button>
+          </div>
+        </div>
+
+        <div class="stat-box">
+          <h4 style="margin:0 0 8px">Statistik Koleksi</h4>
+          <div style="font-weight:800">Total Buku: 50,040</div>
+          <div style="margin-top:8px;font-weight:800">Tersedia: 42,315</div>
+        </div>
+      </aside>
+
+      <!-- Main Content -->
+      <main class="main">
+        <div class="card" style="margin-bottom:16px;display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+          <div>
+            <h3 style="margin:0">Koleksi Buku</h3>
+            <p id="results-count" class="muted" style="margin:6px 0 0">Menampilkan 0 dari 0 buku</p>
+          </div>
+
+          <div style="display:flex;align-items:center;gap:8px">
+            <span class="muted">Tampilan:</span>
+            <div class="view-controls">
+              <button id="view-grid" class="page-btn active" title="Grid"><i class="fas fa-th"></i></button>
+              <button id="view-list" class="page-btn" title="List"><i class="fas fa-list"></i></button>
+            </div>
+          </div>
+        </div>
+
+        <!-- loading -->
+        <div id="loading" style="display:none;text-align:center;padding:30px">
+          <div style="display:inline-block;border:4px solid #f3f4f6;border-top:4px solid var(--amber-900);border-radius:50%;width:42px;height:42px;animation:spin .9s linear infinite"></div>
+        </div>
+
+        <!-- books -->
+        <div id="books-container" class="books-grid"></div>
+
+        <div id="no-results" class="no-results" style="display:none">
+          <i class="fas fa-search" style="font-size:42px;color:var(--muted)"></i>
+          <h3 style="margin:12px 0 6px">Tidak ada buku yang ditemukan</h3>
+          <p class="muted">Coba kata kunci lain atau atur ulang filter.</p>
+        </div>
+
+        <div id="pagination" class="pagination" style="margin-top:18px"></div>
+      </main>
+    </div>
+  </section>
+
+  <!-- Book Detail Modal -->
+  <div id="book-modal" class="modal hidden" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal-card">
+      <div style="padding:18px">
+        <div style="display:flex;justify-content:space-between;align-items:start;gap:12px">
+          <h3 class="font-playfair" id="modal-title">Detail Buku</h3>
+          <button id="close-modal" style="background:transparent;border:0;font-size:22px;cursor:pointer"><i class="fas fa-times"></i></button>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr;gap:12px;margin-top:12px">
+          <div style="display:flex;gap:16px;flex-wrap:wrap">
+            <div style="width:180px;height:260px;border-radius:10px;background:linear-gradient(90deg,var(--amber-700),var(--amber-900));display:flex;align-items:center;justify-content:center;color:#fff;font-size:36px">
+              <i class="fas fa-book-open"></i>
+            </div>
+            <div style="flex:1">
+              <div id="modal-meta" style="margin-bottom:8px"></div>
+              <div id="modal-desc" class="muted"></div>
+              <div style="margin-top:12px;display:flex;gap:8px;flex-wrap:wrap">
+                <button class="btn btn-primary">Pinjam Buku</button>
+                <button class="btn" style="background:#fff;border:1px solid var(--amber-900);color:var(--amber-900)">Tambah ke Wishlist</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- Featured Collections -->
+  <section class="container" style="margin-top:28px">
+    <div class="card">
+      <h2 class="font-playfair" style="margin:0 0 8px">Koleksi Terkurasi</h2>
+      <p class="muted" style="margin:0 0 16px">Rekomendasi pilihan tim kurator Foreword Library</p>
+
+      <div class="featured-grid">
+        <div class="card">
+          <div style="height:120px;background:linear-gradient(90deg,#1e3a8a,#0f172a);display:flex;align-items:center;justify-content:center;color:#fff;font-size:36px;border-radius:8px">🏆</div>
+          <h4 style="margin:12px 0 6px">Penghargaan Sastra</h4>
+          <p class="muted">Kumpulan karya pemenang penghargaan nasional & internasional.</p>
+        </div>
+
+        <div class="card">
+          <div style="height:120px;background:linear-gradient(90deg,#059669,#065f46);display:flex;align-items:center;justify-content:center;color:#fff;font-size:36px;border-radius:8px">🍵</div>
+          <h4 style="margin:12px 0 6px">Baca di Musim Hujan</h4>
+          <p class="muted">Buku yang sempurna ditemani secangkir teh hangat.</p>
+        </div>
+
+        <div class="card">
+          <div style="height:120px;background:linear-gradient(90deg,#6d28d9,#5b21b6);display:flex;align-items:center;justify-content:center;color:#fff;font-size:36px;border-radius:8px">🌏</div>
+          <h4 style="margin:12px 0 6px">Literatur Asia Tenggara</h4>
+          <p class="muted">Karya dari penulis Indonesia, Malaysia, Singapura, dan sekitarnya.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section style="margin-top:22px" class="container">
+    <div class="cta">
+      <h3 class="font-playfair" style="margin:0 0 8px">Temukan Buku Impian Anda</h3>
+      <p style="margin:0 0 12px">Bergabunglah sebagai anggota untuk akses penuh ke koleksi kami.</p>
+      <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:12px">
+        <a href="anggota.html" style="background:#fff;color:var(--amber-900);padding:10px 18px;border-radius:10px;font-weight:700;text-decoration:none">Daftar Menjadi Anggota</a>
+        <a href="kontak.html" style="border:2px solid rgba(255,255,255,0.9);color:#fff;padding:10px 18px;border-radius:10px;text-decoration:none">Butuh Rekomendasi?</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer style="margin-top:28px">
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr;gap:18px">
+        <div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <div style="background:var(--amber-600);padding:8px;border-radius:8px;color:#fff"><i class="fas fa-book-open"></i></div>
+            <div style="font-family:'Playfair Display',serif;font-weight:700">Foreword Library</div>
+          </div>
+          <p style="color:rgba(255,255,255,0.85);max-width:380px">"Ruangan milik sendiri" untuk melarikan diri ke dunia lain, sambil menggenggam cangkir dan terlepas dari gangguan duniawi.</p>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 8px;color:rgba(255,255,255,0.95)">Tautan Cepat</h4>
+          <ul style="list-style:none;padding:0;margin:0;color:rgba(255,255,255,0.85)">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="koleksi.html">Koleksi Buku</a></li>
+            <li><a href="anggota.html">Keanggotaan</a></li>
+            <li><a href="kontak.html">Kontak & Lokasi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 8px;color:rgba(255,255,255,0.95)">Lokasi</h4>
+          <ul style="list-style:none;padding:0;margin:0;color:rgba(255,255,255,0.85)">
+            <li>Kemang: Jl. Kemang Raya No. 12</li>
+            <li>Senopati: Jl. Suryo No. 24</li>
+            <li>Pondok Indah: Mall PI, Lt. 3</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 8px;color:rgba(255,255,255,0.95)">Kontak</h4>
+          <p style="color:rgba(255,255,255,0.85)"><i class="fas fa-envelope" style="color:var(--amber-300);margin-right:8px"></i>hello@forewordlibrary.id</p>
+          <div style="margin-top:10px">
+            <a href="#" class="socials"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="socials"><i class="fab fa-twitter"></i></a>
+            <a href="#" class="socials"><i class="fab fa-facebook-f"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,0.04);margin-top:18px;padding-top:16px;text-align:center;color:rgba(255,255,255,0.6)">
+        &copy; 2023 Foreword Library. Semua hak dilindungi. | <a href="privacy.html">Kebijakan Privasi</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to top -->
+  <button id="back-to-top" aria-label="Ke atas"><i class="fas fa-arrow-up"></i></button>
+
+  <script>
+    /***********
+     * SAMPLE DATA
+     ***********/
+    const BOOKS = [
+      { id:1, title:"Sang Penyair Senyap", author:"A. Prasetya", year:2019, categories:["Fiksi"], language:"Indonesia", available:true, popularity:78, tags:["sastra indonesia"], desc:"Roman puitis tentang pencarian identitas." },
+      { id:2, title:"Quantum & Kita", author:"Dr. S. Hadi", year:2021, categories:["Sains"], language:"Indonesia", available:true, popularity:45, tags:["sains","teknologi"], desc:"Pengantar fisika kuantum untuk umum." },
+      { id:3, title:"Atlas Cerita Dunia", author:"Maya R.", year:2018, categories:["Non-Fiksi"], language:"Inggris", available:false, popularity:92, tags:["sejarah dunia"], desc:"Kumpulan esai dan peta sejarah budaya." },
+      { id:4, title:"Langit di Ujung Jalan", author:"S. Nugroho", year:2023, categories:["Fiksi"], language:"Indonesia", available:true, popularity:55, tags:["novel terbaru"], desc:"Novel kontemporer tentang komunitas kota." },
+      { id:5, title:"Desain Ruang Publik", author:"K. Hartono", year:2017, categories:["Seni"], language:"Indonesia", available:true, popularity:34, tags:["desain"], desc:"Buku referensi desain ruang dan arsitektur." },
+      { id:6, title:"Masa Depan Ekonomi", author:"L. Tan", year:2020, categories:["Bisnis"], language:"Inggris", available:true, popularity:65, tags:["bisnis"], desc:"Analisis ekonomi global pasca-pandemi." },
+      { id:7, title:"Dongeng untuk Malam Hujan", author:"N. Putri", year:2016, categories:["Anak"], language:"Indonesia", available:true, popularity:48, tags:["anak"], desc:"Kumpulan dongeng hangat untuk anak." },
+      { id:8, title:"Fiksi Ilmiah Nusantara", author:"R. Wibowo", year:2022, categories:["Fiksi"], language:"Indonesia", available:false, popularity:88, tags:["fiksi ilmiah"], desc:"Antologi fiksi ilmiah karya penulis lokal." },
+      { id:9, title:"Biografi Seorang Pelaut", author:"H. Darmono", year:2015, categories:["Non-Fiksi"], language:"Indonesia", available:true, popularity:30, tags:["biografi"], desc:"Kisah perjalanan dan pelayaran." },
+      { id:10, title:"Kisah Dari Pulau", author:"S. Lee", year:2014, categories:["Fiksi"], language:"Inggris", available:true, popularity:40, tags:["asia tenggara"], desc:"Cerita pendek dari berbagai pulau Asia Tenggara." },
+      { id:11, title:"Fotografi Jalanan", author:"A. Malik", year:2021, categories:["Seni"], language:"Indonesia", available:true, popularity:52, tags:["fotografi"], desc:"Teknik dan kisah di balik foto jalanan." },
+      { id:12, title:"Panduan Startup", author:"T. Kurnia", year:2019, categories:["Bisnis"], language:"Indonesia", available:true, popularity:60, tags:["startup","bisnis"], desc:"Panduan praktis membangun startup." },
+      // ... tambahkan lebih banyak bila perlu
+    ];
+
+    /***********
+     * UTILS
+     ***********/
+    const el = (sel) => document.querySelector(sel);
+    const els = (sel) => Array.from(document.querySelectorAll(sel));
+
+    function formatCount(n){ return n.toLocaleString('id-ID'); }
+
+    /***********
+     * RENDERING
+     ***********/
+    const state = {
+      books: BOOKS.slice(),
+      query: '',
+      filterMode: 'all',
+      categories: new Set(['Fiksi','Non-Fiksi','Sains','Sejarah','Seni','Bisnis','Anak']),
+      languages: new Set(['Indonesia','Inggris','Lainnya']),
+      yearFrom: 1900,
+      yearTo: 2023,
+      sort: 'relevance',
+      page: 1,
+      perPage: 12,
+      view: 'grid'
+    };
+
+    const booksContainer = el('#books-container');
+    const resultsCount = el('#results-count');
+    const loadingEl = el('#loading');
+    const noResults = el('#no-results');
+    const paginationEl = el('#pagination');
+
+    function applyFiltersAndRender(){
+      loadingEl.style.display = 'block';
+      booksContainer.innerHTML = '';
+      noResults.style.display = 'none';
+
+      setTimeout(() => {
+        // filter
+        let filtered = BOOKS.filter(book => {
+          // search
+          const q = state.query.trim().toLowerCase();
+          if(q){
+            const hay = (book.title + ' ' + book.author + ' ' + (book.desc||'') + ' ' + (book.tags||[]).join(' ')).toLowerCase();
+            if(!hay.includes(q)) return false;
+          }
+          // category
+          if(![...book.categories].some(c => state.categories.has(c))) return false;
+          // language
+          const langKey = state.languages.has(book.language) ? book.language : (state.languages.has('Lainnya') ? 'Lainnya' : null);
+          if(!langKey) return false;
+          // year range
+          if(book.year < state.yearFrom || book.year > state.yearTo) return false;
+          // filter mode
+          if(state.filterMode === 'available' && !book.available) return false;
+          if(state.filterMode === 'popular' && book.popularity < 60) return false;
+          if(state.filterMode === 'new' && book.year < (new Date().getFullYear()-2)) return false;
+          return true;
+        });
+
+        // sort
+        if(state.sort === 'title-asc') filtered.sort((a,b)=>a.title.localeCompare(b.title));
+        else if(state.sort === 'title-desc') filtered.sort((a,b)=>b.title.localeCompare(a.title));
+        else if(state.sort === 'author-asc') filtered.sort((a,b)=>a.author.localeCompare(b.author));
+        else if(state.sort === 'year-desc') filtered.sort((a,b)=>b.year - a.year);
+        else if(state.sort === 'year-asc') filtered.sort((a,b)=>a.year - b.year);
+        else if(state.sort === 'popularity') filtered.sort((a,b)=>b.popularity - a.popularity);
+
+        // pagination
+        const total = filtered.length;
+        const pages = Math.max(1, Math.ceil(total / state.perPage));
+        if(state.page > pages) state.page = pages;
+        const start = (state.page - 1) * state.perPage;
+        const paged = filtered.slice(start, start + state.perPage);
+
+        // render count
+        resultsCount.textContent = `Menampilkan ${Math.min(state.perPage, paged.length)} dari ${formatCount(total)} buku`;
+
+        // render books
+        if(paged.length === 0){
+          noResults.style.display = 'block';
+        } else {
+          paged.forEach(book => {
+            const card = document.createElement('article');
+            card.className = 'book-card';
+            card.innerHTML = `
+              <div class="book-cover" aria-hidden="true"><i class="fas fa-book-open"></i></div>
+              <div class="book-body">
+                <div>
+                  <h4 style="margin:0">${escapeHtml(book.title)}</h4>
+                  <div class="muted" style="margin-top:6px">${escapeHtml(book.author)} • ${book.year}</div>
+                </div>
+                <div>
+                  <div class="meta-row" style="margin-top:10px">
+                    <div><span class="badge" style="background:${book.available ? '#def7ec':'#fee2e2'};color:${book.available ? '#065f46':'#991b1b'}">${book.available ? 'Tersedia' : 'Dipinjam'}</span></div>
+                    <div style="font-size:13px">${book.language}</div>
+                  </div>
+                  <div class="book-actions">
+                    <button class="btn" data-action="detail" data-id="${book.id}">Detail</button>
+                    <button class="btn" data-action="wishlist" data-id="${book.id}" style="background:#fff;border:1px solid #e5e7eb">Wishlist</button>
+                  </div>
+                </div>
+              </div>
+            `;
+            booksContainer.appendChild(card);
+          });
+        }
+
+        // render pagination
+        renderPagination(pages);
+
+        loadingEl.style.display = 'none';
+      }, 220); // simulate small delay
+    }
+
+    function renderPagination(pages){
+      paginationEl.innerHTML = '';
+      if(pages <= 1) return;
+      const createBtn = (n, label = n) => {
+        const b = document.createElement('button');
+        b.className = 'page-btn' + (n === state.page ? ' active' : '');
+        b.textContent = label;
+        b.addEventListener('click', ()=>{ state.page = n; applyFiltersAndRender(); });
+        return b;
+      };
+      if(state.page > 1) paginationEl.appendChild(createBtn(state.page-1, '‹'));
+      for(let i=1;i<=pages;i++){
+        paginationEl.appendChild(createBtn(i));
+      }
+      if(state.page < pages) paginationEl.appendChild(createBtn(state.page+1, '›'));
+    }
+
+    // escape HTML small util
+    function escapeHtml(s){ return String(s).replace(/[&<>"']/g, c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":"&#39;"}[c])); }
+
+    /***********
+     * EVENTS
+     ***********/
+    // search
+    el('#search-button').addEventListener('click', ()=>{ state.query = el('#search-input').value; state.page=1; applyFiltersAndRender(); });
+    el('#search-input').addEventListener('keydown', (e)=>{ if(e.key==='Enter'){ state.query = e.target.value; state.page=1; applyFiltersAndRender(); } });
+
+    // quick search
+    els('.filter-quick').forEach(btn=>{
+      btn.addEventListener('click', ()=>{ el('#search-input').value = btn.dataset.search; state.query = btn.dataset.search; state.page=1; applyFiltersAndRender(); });
+    });
+
+    // filter buttons (all/available/popular/new)
+    els('.filter-button').forEach(btn=>{
+      btn.addEventListener('click', ()=>{
+        els('.filter-button').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        state.filterMode = btn.dataset.filter;
+        state.page=1;
+        applyFiltersAndRender();
+      });
+    });
+
+    // category checkboxes
+    els('.category-filter').forEach(cb=>{
+      cb.addEventListener('change', ()=>{
+        state.categories = new Set(els('.category-filter').filter(c=>c.checked).map(c=>c.value));
+        state.page=1; applyFiltersAndRender();
+      });
+    });
+
+    // language checkboxes
+    els('.language-filter').forEach(cb=>{
+      cb.addEventListener('change', ()=>{
+        state.languages = new Set(els('.language-filter').filter(c=>c.checked).map(c=>c.value));
+        state.page=1; applyFiltersAndRender();
+      });
+    });
+
+    // year inputs
+    el('#year-from').addEventListener('change', (e)=>{ state.yearFrom = Number(e.target.value||1900); state.page=1; applyFiltersAndRender(); });
+    el('#year-to').addEventListener('change', (e)=>{ state.yearTo = Number(e.target.value||2023); state.page=1; applyFiltersAndRender(); });
+
+    // apply/reset filters
+    el('#apply-filters').addEventListener('click', ()=>{
+      state.page=1; applyFiltersAndRender();
+    });
+    el('#reset-filters').addEventListener('click', ()=>{
+      els('.category-filter').forEach(cb=>cb.checked=true);
+      els('.language-filter').forEach(cb=>cb.checked=true);
+      el('#year-from').value = 1900;
+      el('#year-to').value = new Date().getFullYear();
+      state.query=''; el('#search-input').value='';
+      state.categories = new Set(els('.category-filter').map(c=>c.value));
+      state.languages = new Set(els('.language-filter').map(c=>c.value));
+      state.yearFrom = 1900; state.yearTo = new Date().getFullYear();
+      state.filterMode = 'all'; els('.filter-button').forEach(b=>b.classList.remove('active')); els('.filter-button')[0].classList.add('active');
+      state.sort = 'relevance'; el('#sort-select').value='relevance';
+      state.page = 1;
+      applyFiltersAndRender();
+    });
+
+    // sort
+    el('#sort-select').addEventListener('change', (e)=>{ state.sort = e.target.value; state.page=1; applyFiltersAndRender(); });
+
+    // view toggle
+    el('#view-grid').addEventListener('click', ()=>{
+      state.view = 'grid';
+      el('#view-grid').classList.add('active');
+      el('#view-list').classList.remove('active');
+      booksContainer.classList.remove('list-view');
+    });
+    el('#view-list').addEventListener('click', ()=>{
+      state.view = 'list';
+      el('#view-list').classList.add('active');
+      el('#view-grid').classList.remove('active');
+      booksContainer.classList.add('list-view');
+    });
+
+    // delegate book actions (detail, wishlist)
+    booksContainer.addEventListener('click', (e)=>{
+      const btn = e.target.closest('button');
+      if(!btn) return;
+      const action = btn.dataset.action;
+      const id = Number(btn.dataset.id);
+      if(action === 'detail') openModalForBook(id);
+      if(action === 'wishlist') alert('Ditambahkan ke wishlist (simulasi) — ID: '+id);
+    });
+
+    // modal
+    const modal = el('#book-modal');
+    const modalTitle = el('#modal-title');
+    const modalMeta = el('#modal-meta');
+    const modalDesc = el('#modal-desc');
+    function openModalForBook(id){
+      const b = BOOKS.find(x=>x.id===id);
+      if(!b) return;
+      modalTitle.textContent = b.title;
+      modalMeta.innerHTML = `<div style="font-weight:700">${b.author} • ${b.year}</div><div style="margin-top:6px">${b.categories.join(', ')} • ${b.language}</div><div style="margin-top:6px">${b.available ? '<span style="color:green;font-weight:700">Tersedia</span>' : '<span style="color:#a21caf;font-weight:700">Dipinjam</span>'}</div>`;
+      modalDesc.textContent = b.desc || '';
+      modal.classList.remove('hidden'); modal.setAttribute('aria-hidden','false');
+    }
+    el('#close-modal').addEventListener('click', ()=>{ modal.classList.add('hidden'); modal.setAttribute('aria-hidden','true'); });
+    modal.addEventListener('click', (e)=>{ if(e.target === modal) { modal.classList.add('hidden'); modal.setAttribute('aria-hidden','true'); } });
+
+    // mobile menu toggle
+    const mobileBtn = el('#mobile-menu-button');
+    const mobileMenu = el('#mobile-menu');
+    mobileBtn.addEventListener('click', ()=>{
+      const expanded = mobileBtn.getAttribute('aria-expanded') === 'true';
+      mobileBtn.setAttribute('aria-expanded', String(!expanded));
+      if(mobileMenu.style.display === 'block'){ mobileMenu.style.display = 'none'; mobileMenu.setAttribute('aria-hidden','true'); }
+      else { mobileMenu.style.display = 'block'; mobileMenu.setAttribute('aria-hidden','false'); }
+    });
+    // hide mobile menu on resize
+    window.addEventListener('resize', ()=>{ if(window.innerWidth >= 980){ mobileMenu.style.display='none'; mobileBtn.setAttribute('aria-expanded','false'); } });
+
+    // back to top
+    const backBtn = el('#back-to-top');
+    window.addEventListener('scroll', ()=>{ if(window.pageYOffset > 300) backBtn.classList.add('show'); else backBtn.classList.remove('show'); });
+    backBtn.addEventListener('click', ()=> window.scrollTo({top:0,behavior:'smooth'}) );
+
+    /***********
+     * INIT
+     ***********/
+    // set default year-to to current year
+    el('#year-to').value = new Date().getFullYear();
+    state.yearTo = new Date().getFullYear();
+
+    // initial render
+    applyFiltersAndRender();
+
+    // simple spinner animation style
+    const style = document.createElement('style');
+    style.textContent = '@keyframes spin{to{transform:rotate(360deg)}}';
+    document.head.appendChild(style);
+  </script>
+</body>
+</html>

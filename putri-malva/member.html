@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Keanggotaan - Foreword Library</title>
+
+  <!-- Fonts & Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="assets/css/member.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <div class="logo-icon"><i class="fas fa-book-open"></i></div>
+        <div>
+          <h1 class="font-playfair">Foreword Library</h1>
+          <p>Perpustakaan Modern & Aesthetic</p>
+        </div>
+      </a>
+
+      <nav class="desktop" aria-label="Main navigation">
+        <a href="index.html">Beranda</a>
+        <a href="about.html">Tentang</a>
+        <a href="koleksi.html">Koleksi</a>
+        <a href="member.html" class="active">Keanggotaan</a>
+        <a href="contact.html">Kontak</a>
+      </nav>
+
+      <div class="header-cta">
+        <button class="btn btn-primary"><i class="fas fa-user" style="margin-right:8px"></i>Login Anggota</button>
+        <button class="mobile-toggle" id="mobile-menu-button" aria-controls="mobile-menu" aria-expanded="false" title="Buka menu">
+          <i class="fas fa-bars"></i>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="mobile-menu container" aria-hidden="true">
+      <a href="index.html">Beranda</a>
+      <a href="about.html">Tentang</a>
+      <a href="koleksi.html">Koleksi</a>
+      <a href="member.html" style="color:var(--amber-900)">Keanggotaan</a>
+      <a href="contact.html">Kontak</a>
+      <div style="margin-top:10px"><button class="btn btn-primary" style="width:100%"><i class="fas fa-user" style="margin-right:8px"></i>Login Anggota</button></div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="pattern" aria-hidden="true"></div>
+    <div class="container text-center">
+      <h1 class="font-playfair">Bergabung dengan Komunitas Kami</h1>
+      <p class="lead">Temukan "ruangan sendiri" Anda dan akses dunia literasi tanpa batas</p>
+      <div class="decor" aria-hidden="true"></div>
+      <p style="max-width:820px;margin:12px auto 0;color:rgba(255,255,255,0.95)">Dengan menjadi anggota Foreword Library, Anda tidak hanya mendapatkan akses ke koleksi buku terkurasi, tetapi juga menjadi bagian dari komunitas pembaca yang saling terhubung melalui kecintaan pada kata-kata.</p>
+    </div>
+  </section>
+
+  <!-- Keuntungan -->
+  <section>
+    <div class="container">
+      <div class="text-center mb-6 fade-in" id="why-join">
+        <h2 class="font-playfair" style="font-size:26px">Mengapa Menjadi Anggota?</h2>
+        <p class="muted" style="max-width:760px;margin:8px auto 0">Bergabunglah dengan ribuan pembaca yang telah menemukan ruang literasi ideal mereka di Foreword Library</p>
+      </div>
+
+      <div class="grid benefits-grid" style="margin-top:18px">
+        <div class="benefit fade-in">
+          <div class="icon"><i class="fas fa-book-open"></i></div>
+          <h3 style="margin:8px 0 6px">Akses Tak Terbatas</h3>
+          <p class="muted">Pinjam hingga 10 buku sekaligus dengan periode peminjaman 30 hari untuk setiap buku.</p>
+        </div>
+
+        <div class="benefit fade-in">
+          <div class="icon"><i class="fas fa-coffee"></i></div>
+          <h3 style="margin:8px 0 6px">Diskon Library Cafe</h3>
+          <p class="muted">Dapatkan diskon 15% untuk semua menu di Library Cafe setiap kunjungan.</p>
+        </div>
+
+        <div class="benefit fade-in">
+          <div class="icon"><i class="fas fa-users"></i></div>
+          <h3 style="margin:8px 0 6px">Komunitas Eksklusif</h3>
+          <p class="muted">Akses ke klub buku, diskusi penulis, dan acara literasi khusus anggota.</p>
+        </div>
+
+        <div class="benefit fade-in">
+          <div class="icon"><i class="fas fa-laptop"></i></div>
+          <h3 style="margin:8px 0 6px">Perpustakaan Digital</h3>
+          <p class="muted">Akses ke koleksi e-book dan audiobook melalui aplikasi anggota.</p>
+        </div>
+      </div>
+
+      <div class="stats-gradient" style="margin-top:24px;border-radius:12px">
+        <div class="grid" style="grid-template-columns:repeat(2,1fr);gap:12px">
+          <div style="text-align:center;padding:16px">
+            <div style="font-size:28px;font-weight:800">10,000+</div>
+            <div style="color:rgba(255,255,255,0.85)">Anggota Aktif</div>
+          </div>
+          <div style="text-align:center;padding:16px">
+            <div style="font-size:28px;font-weight:800">50,000+</div>
+            <div style="color:rgba(255,255,255,0.85)">Buku Dipinjam/Bulan</div>
+          </div>
+        </div>
+        <div class="grid" style="grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px">
+          <div style="text-align:center;padding:16px">
+            <div style="font-size:28px;font-weight:800">120+</div>
+            <div style="color:rgba(255,255,255,0.85)">Acara Tahunan</div>
+          </div>
+          <div style="text-align:center;padding:16px">
+            <div style="font-size:28px;font-weight:800">98%</div>
+            <div style="color:rgba(255,255,255,0.85)">Kepuasan Anggota</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Paket -->
+  <section style="background:linear-gradient(180deg,var(--bg),#fff);">
+    <div class="container">
+      <div class="text-center mb-6 fade-in">
+        <h2 class="font-playfair" style="font-size:26px">Pilih Paket Keanggotaan Anda</h2>
+        <p class="muted" style="max-width:760px;margin:8px auto 0">Tersedia pilihan keanggotaan yang disesuaikan dengan kebutuhan literasi Anda</p>
+      </div>
+
+      <div style="text-align:center;margin-bottom:18px">
+        <div class="toggle-group" role="tablist" aria-label="Periode keanggotaan">
+          <button id="toggle-monthly" class="toggle-btn active" role="tab" aria-selected="true">Bulanan</button>
+          <button id="toggle-yearly" class="toggle-btn" role="tab" aria-selected="false">Tahunan <span style="margin-left:8px;background:#fff2d8;color:var(--amber-800);font-weight:800;padding:4px;border-radius:6px;font-size:12px">Hemat 20%</span></button>
+        </div>
+      </div>
+
+      <div class="packages fade-in" id="packages-grid" style="margin-top:12px">
+        <!-- Basic -->
+        <div class="package-card">
+          <h3 style="margin-bottom:6px">Basic Reader</h3>
+          <p class="muted">Untuk pembaca yang ingin menikmati koleksi fisik</p>
+
+          <div class="price-row" style="margin-top:12px">
+            <div class="price monthly-price">Rp 150.000</div>
+            <div class="period monthly-period">/bulan</div>
+
+            <div class="price yearly-price" style="display:none">Rp 1.440.000</div>
+            <div class="period yearly-period" style="display:none">/tahun</div>
+          </div>
+          <div class="muted yearly-save" style="display:none;margin-top:6px">Hemat Rp 360.000 dari harga bulanan</div>
+
+          <ul class="features" style="margin-top:12px;padding-left:18px">
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Pinjam hingga 3 buku sekaligus</li>
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Periode peminjaman 21 hari</li>
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Akses ke semua cabang Foreword</li>
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Diskon 10% di Library Cafe</li>
+            <li style="opacity:.5"><i class="fas fa-times" style="color:#ccc;margin-right:10px"></i>Akses perpustakaan digital</li>
+            <li style="opacity:.5"><i class="fas fa-times" style="color:#ccc;margin-right:10px"></i>Acara anggota eksklusif</li>
+          </ul>
+
+          <div style="margin-top:12px">
+            <button class="btn" style="background:#fff2d8;color:var(--amber-800);padding:12px 14px;border-radius:10px;font-weight:800;cursor:pointer" data-package="Basic Reader">Pilih Paket Ini</button>
+          </div>
+        </div>
+
+        <!-- Premium -->
+        <div class="package-card popular">
+          <h3 style="margin-bottom:6px">Premium Reader</h3>
+          <p class="muted">Untuk pecinta buku yang menginginkan pengalaman lengkap</p>
+
+          <div class="price-row" style="margin-top:12px">
+            <div class="price monthly-price">Rp 300.000</div>
+            <div class="period monthly-period">/bulan</div>
+
+            <div class="price yearly-price" style="display:none">Rp 2.880.000</div>
+            <div class="period yearly-period" style="display:none">/tahun</div>
+          </div>
+          <div class="muted yearly-save" style="display:none;margin-top:6px">Hemat Rp 720.000 dari harga bulanan</div>
+
+          <ul class="features" style="margin-top:12px;padding-left:18px">
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Pinjam hingga 10 buku sekaligus</li>
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Periode peminjaman 30 hari</li>
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Akses ke semua cabang</li>
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Diskon 15% di Library Cafe</li>
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Akses perpustakaan digital</li>
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Undangan acara eksklusif</li>
+          </ul>
+
+          <div style="margin-top:12px">
+            <button class="btn btn-primary" style="padding:12px 14px;border-radius:10px;font-weight:800;cursor:pointer" data-package="Premium Reader">Pilih Paket Populer</button>
+          </div>
+        </div>
+
+        <!-- Family -->
+        <div class="package-card">
+          <h3 style="margin-bottom:6px">Family Circle</h3>
+          <p class="muted">Untuk keluarga yang ingin menumbuhkan budaya membaca</p>
+
+          <div class="price-row" style="margin-top:12px">
+            <div class="price monthly-price">Rp 500.000</div>
+            <div class="period monthly-period">/bulan</div>
+
+            <div class="price yearly-price" style="display:none">Rp 4.800.000</div>
+            <div class="period yearly-period" style="display:none">/tahun</div>
+          </div>
+          <div class="muted yearly-save" style="display:none;margin-top:6px">Hemat Rp 1.200.000 dari harga bulanan</div>
+
+          <ul class="features" style="margin-top:12px;padding-left:18px">
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Untuk hingga 4 anggota keluarga</li>
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Pinjam hingga 15 buku sekaligus</li>
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Akses ke semua cabang</li>
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Diskon 20% di Library Cafe</li>
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Akses perpustakaan digital penuh</li>
+            <li><i class="fas fa-check" style="color:green;margin-right:10px"></i>Acara keluarga & workshop anak</li>
+          </ul>
+
+          <div style="margin-top:12px">
+            <button class="btn" style="background:#fff2d8;color:var(--amber-800);padding:12px 14px;border-radius:10px;font-weight:800;cursor:pointer" data-package="Family Circle">Pilih Paket Ini</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" style="margin-top:18px;max-width:920px;margin-left:auto;margin-right:auto">
+        <h4 style="margin-bottom:8px">Informasi Penting</h4>
+        <ul style="padding-left:18px;color:var(--muted)">
+          <li style="margin-bottom:8px"><i class="fas fa-check" style="color:green;margin-right:8px"></i>Semua paket termasuk akses gratis Wi-Fi dan area baca nyaman di semua cabang</li>
+          <li style="margin-bottom:8px"><i class="fas fa-check" style="color:green;margin-right:8px"></i>Biaya pendaftaran satu kali Rp 100.000 (termasuk kartu anggota dan goodie bag)</li>
+          <li style="margin-bottom:8px"><i class="fas fa-check" style="color:green;margin-right:8px"></i>Pembayaran via transfer bank, kartu, atau langsung di cabang</li>
+          <li><i class="fas fa-check" style="color:green;margin-right:8px"></i>Keanggotaan dapat dibatalkan kapan saja dengan pemberitahuan 30 hari</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cara Mendaftar -->
+  <section>
+    <div class="container">
+      <div class="text-center mb-6 fade-in">
+        <h2 class="font-playfair" style="font-size:26px">Cara Mudah Mendaftar</h2>
+        <p class="muted" style="max-width:760px;margin:8px auto 0">Hanya perlu 4 langkah sederhana untuk menjadi bagian dari komunitas Foreword Library</p>
+      </div>
+
+      <div class="grid steps-grid" style="gap:18px;margin-top:18px">
+        <div class="step fade-in">
+          <div class="num">1</div>
+          <div style="height:64px;width:64px;border-radius:999px;background:#fff2d8;color:var(--amber-800);margin:0 auto;display:flex;align-items:center;justify-content:center;margin-bottom:12px">
+            <i class="fas fa-clipboard-list" style="font-size:20px"></i>
+          </div>
+          <h3 style="margin-bottom:8px">Pilih Paket</h3>
+          <p class="muted">Pilih paket keanggotaan yang paling sesuai dengan kebutuhan literasi Anda.</p>
+        </div>
+
+        <div class="step fade-in">
+          <div class="num">2</div>
+          <div style="height:64px;width:64px;border-radius:999px;background:#fff2d8;color:var(--amber-800);margin:0 auto;display:flex;align-items:center;justify-content:center;margin-bottom:12px">
+            <i class="fas fa-user-edit" style="font-size:20px"></i>
+          </div>
+          <h3 style="margin-bottom:8px">Isi Formulir</h3>
+          <p class="muted">Isi formulir pendaftaran secara online atau langsung di cabang terdekat.</p>
+        </div>
+
+        <div class="step fade-in">
+          <div class="num">3</div>
+          <div style="height:64px;width:64px;border-radius:999px;background:#fff2d8;color:var(--amber-800);margin:0 auto;display:flex;align-items:center;justify-content:center;margin-bottom:12px">
+            <i class="fas fa-credit-card" style="font-size:20px"></i>
+          </div>
+          <h3 style="margin-bottom:8px">Lakukan Pembayaran</h3>
+          <p class="muted">Selesaikan pembayaran biaya pendaftaran dan keanggotaan pertama.</p>
+        </div>
+
+        <div class="step fade-in">
+          <div class="num">4</div>
+          <div style="height:64px;width:64px;border-radius:999px;background:#fff2d8;color:var(--amber-800);margin:0 auto;display:flex;align-items:center;justify-content:center;margin-bottom:12px">
+            <i class="fas fa-book-reader" style="font-size:20px"></i>
+          </div>
+          <h3 style="margin-bottom:8px">Nikmati Keanggotaan</h3>
+          <p class="muted">Dapatkan kartu anggota dan mulai jelajahi koleksi Foreword Library.</p>
+        </div>
+      </div>
+
+      <!-- Registration form -->
+      <div class="card" style="margin-top:18px;overflow:hidden">
+        <div style="display:flex;flex-direction:column">
+          <div class="register-left" style="background:linear-gradient(90deg,var(--amber-900),var(--amber-800));color:#fff">
+            <h3 class="font-playfair" style="font-size:22px;margin-bottom:8px">Daftar Sekarang</h3>
+            <p class="muted" style="color:rgba(255,255,255,0.9);margin-bottom:12px">Bergabunglah dengan komunitas pembaca terbesar di Jakarta. Isi formulir di samping dan tim kami akan menghubungi Anda dalam 24 jam.</p>
+            <ul style="list-style:none;padding:0;margin:0;color:rgba(255,255,255,0.95)">
+              <li style="margin-bottom:8px"><i class="fas fa-check-circle" style="margin-right:8px;color:#ffdca8"></i>Proses pendaftaran hanya memakan waktu 10 menit</li>
+              <li style="margin-bottom:8px"><i class="fas fa-check-circle" style="margin-right:8px;color:#ffdca8"></i>Garansi uang kembali dalam 7 hari jika tidak puas</li>
+              <li><i class="fas fa-check-circle" style="margin-right:8px;color:#ffdca8"></i>Konsultasi gratis dengan librarian untuk rekomendasi buku</li>
+            </ul>
+          </div>
+
+          <div class="register-right">
+            <h4 style="margin-bottom:12px">Form Pendaftaran Cepat</h4>
+            <form id="membership-form" action="#" method="post">
+              <div style="margin-bottom:12px" class="floating-label">
+                <input id="quick-name" type="text" placeholder=" " required>
+                <label for="quick-name">Nama Lengkap</label>
+              </div>
+
+              <div style="margin-bottom:12px" class="floating-label">
+                <input id="quick-email" type="email" placeholder=" " required>
+                <label for="quick-email">Email</label>
+              </div>
+
+              <div style="margin-bottom:12px" class="floating-label">
+                <input id="quick-phone" type="tel" placeholder=" " required>
+                <label for="quick-phone">Nomor Telepon</label>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width:100%;padding:12px;border-radius:10px">Kirim Formulir</button>
+            </form>
+            <p class="muted" style="font-size:12px;margin-top:10px">Dengan mengirim formulir, Anda menyetujui <a href="#" style="color:var(--amber-700)">Syarat & Ketentuan</a> kami.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials & FAQ -->
+  <section>
+    <div class="container">
+      <div class="text-center mb-6 fade-in">
+        <h2 class="font-playfair" style="font-size:26px">Kata Anggota Kami</h2>
+        <p class="muted" style="max-width:760px;margin:8px auto 0">Dengarkan pengalaman mereka yang telah menemukan "ruangan sendiri" di Foreword Library</p>
+      </div>
+
+      <div class="grid testimonials-grid" style="gap:18px;margin-top:18px">
+        <div class="testimonial fade-in">
+          <div style="color:var(--amber-300);margin-bottom:12px"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p style="font-style:italic;margin-bottom:12px">"Sejak menjadi anggota Premium, saya bisa mengeksplorasi genre baru tanpa khawatir biaya. Ruang baca yang nyaman dan koleksi yang selalu diperbarui membuat saya datang setiap minggu."</p>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:44px;height:44px;border-radius:999px;background:#fff2d8;display:flex;align-items:center;justify-content:center;color:var(--amber-800)">AS</div>
+            <div><strong>Aisha Salsabila</strong><div class="muted">Anggota Premium sejak 2020</div></div>
+          </div>
+        </div>
+
+        <div class="testimonial fade-in">
+          <div style="color:var(--amber-300);margin-bottom:12px"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
+          <p style="font-style:italic;margin-bottom:12px">"Paket Family Circle sangat worth it untuk keluarga kami. Anak-anak jadi semangat membaca, dan kami bisa menghabiskan waktu berkualitas bersama di sini."</p>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:44px;height:44px;border-radius:999px;background:#fff2d8;display:flex;align-items:center;justify-content:center;color:var(--amber-800)">RF</div>
+            <div><strong>Rizki Firmansyah</strong><div class="muted">Anggota Family sejak 2021</div></div>
+          </div>
+        </div>
+
+        <div class="testimonial fade-in">
+          <div style="color:var(--amber-300);margin-bottom:12px"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
+          <p style="font-style:italic;margin-bottom:12px">"Sebagai mahasiswa, paket Basic sangat terjangkau dan memenuhi kebutuhan saya. Wi-Fi cepatnya juga sangat membantu!"</p>
+          <div style="display:flex;align-items:center;gap:12px">
+            <div style="width:44px;height:44px;border-radius:999px;background:#fff2d8;display:flex;align-items:center;justify-content:center;color:var(--amber-800)">DW</div>
+            <div><strong>Dewi Wulandari</strong><div class="muted">Anggota Basic sejak 2022</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="card faq" style="margin-top:20px;max-width:880px;margin-left:auto;margin-right:auto">
+        <h3 class="font-playfair text-center" style="margin-bottom:12px">Pertanyaan Umum Keanggotaan</h3>
+
+        <div>
+          <div style="border-bottom:1px solid #f1f1f1;padding:12px 0">
+            <button class="question" type="button">
+              <span>Apakah ada biaya pendaftaran?</span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="answer">Ya, ada biaya pendaftaran satu kali sebesar Rp 100.000 yang mencakup biaya administrasi, kartu anggota, dan goodie bag sambutan.</div>
+          </div>
+
+          <div style="border-bottom:1px solid #f1f1f1;padding:12px 0">
+            <button class="question" type="button">
+              <span>Bagaimana cara membatalkan keanggotaan?</span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="answer">Anda dapat membatalkan keanggotaan kapan saja dengan mengisi formulir pembatalan di cabang terdekat atau melalui email dengan pemberitahuan minimal 30 hari.</div>
+          </div>
+
+          <div style="border-bottom:1px solid #f1f1f1;padding:12px 0">
+            <button class="question" type="button">
+              <span>Apakah keanggotaan bisa dipindahtangankan?</span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="answer">Keanggotaan bersifat personal dan tidak dapat dipindahtangankan, kecuali untuk paket Family Circle yang memang ditujukan untuk keluarga.</div>
+          </div>
+
+          <div style="padding:12px 0">
+            <button class="question" type="button">
+              <span>Apakah ada denda keterlambatan?</span>
+              <i class="fas fa-chevron-down" aria-hidden="true"></i>
+            </button>
+            <div class="answer">Ya, ada denda keterlambatan sebesar Rp 2.000 per buku per hari. Anda dapat memperpanjang masa pinjam melalui aplikasi atau cabang sebelum jatuh tempo.</div>
+          </div>
+        </div>
+
+        <div style="text-align:center;margin-top:16px">
+          <a href="faq.html" style="color:var(--amber-700);font-weight:700">Lihat FAQ Lengkap <i class="fas fa-arrow-right" style="margin-left:8px"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section>
+    <div class="container">
+      <div class="cta">
+        <h3 class="font-playfair" style="font-size:22px;margin-bottom:8px">Temukan "Ruangan Sendiri" Anda Hari Ini</h3>
+        <p style="margin-bottom:12px">Bergabunglah dengan komunitas pembaca yang telah menemukan tempat ideal untuk melarikan diri ke dunia lain.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap">
+          <a href="#" style="background:#fff;color:var(--amber-900);padding:12px 20px;border-radius:10px;font-weight:800;text-decoration:none">Daftar Sekarang</a>
+          <a href="kontak.html" style="border:2px solid rgba(255,255,255,0.9);color:#fff;padding:12px 20px;border-radius:10px;text-decoration:none">Konsultasi Gratis</a>
+        </div>
+        <p style="margin-top:12px;color:rgba(255,255,255,0.9)">Masih ragu? Coba free trial 7 hari dengan mengunjungi cabang terdekat!</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div style="display:grid;grid-template-columns:1fr;gap:18px">
+        <div>
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px">
+            <div style="background:var(--amber-600);padding:8px;border-radius:8px;color:#fff"><i class="fas fa-book-open"></i></div>
+            <div style="font-family:'Playfair Display',serif;font-weight:700">Foreword Library</div>
+          </div>
+          <p style="color:rgba(255,255,255,0.85);max-width:380px">"Ruangan milik sendiri" untuk melarikan diri ke dunia lain, sambil menggenggam cangkir dan terlepas dari gangguan duniawi.</p>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 8px;color:rgba(255,255,255,0.95)">Tautan Cepat</h4>
+          <ul style="list-style:none;padding:0;margin:0;color:rgba(255,255,255,0.85)">
+            <li><a href="index.html">Beranda</a></li>
+            <li><a href="tentang.html">Tentang Kami</a></li>
+            <li><a href="koleksi.html">Koleksi Buku</a></li>
+            <li><a href="anggota.html">Keanggotaan</a></li>
+            <li><a href="kontak.html">Kontak & Lokasi</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 8px;color:rgba(255,255,255,0.95)">Paket Keanggotaan</h4>
+          <ul style="list-style:none;padding:0;margin:0;color:rgba(255,255,255,0.85)">
+            <li>Basic Reader</li>
+            <li>Premium Reader</li>
+            <li>Family Circle</li>
+            <li>Free Trial 7 Hari</li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 style="margin:0 0 8px;color:rgba(255,255,255,0.95)">Butuh Bantuan?</h4>
+          <ul style="list-style:none;padding:0;margin:0;color:rgba(255,255,255,0.85)">
+            <li style="margin-bottom:8px"><i class="fas fa-phone-alt" style="color:var(--amber-300);margin-right:8px"></i>(021) 1234-5678</li>
+            <li style="margin-bottom:8px"><i class="fab fa-whatsapp" style="color:var(--amber-300);margin-right:8px"></i>0812-3456-7890</li>
+            <li><i class="fas fa-envelope" style="color:var(--amber-300);margin-right:8px"></i>anggota@forewordlibrary.id</li>
+          </ul>
+
+          <div style="margin-top:12px">
+            <a href="#" style="margin-right:8px;color:rgba(255,255,255,0.9)"><i class="fab fa-instagram"></i></a>
+            <a href="#" style="margin-right:8px;color:rgba(255,255,255,0.9)"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" style="color:rgba(255,255,255,0.9)"><i class="fab fa-twitter"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid rgba(255,255,255,0.04);margin-top:18px;padding-top:16px;text-align:center;color:rgba(255,255,255,0.6)">
+        &copy; 2023 Foreword Library. Semua hak dilindungi. | <a href="privacy.html">Kebijakan Privasi</a> | <a href="terms.html">Syarat & Ketentuan</a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="back-to-top" aria-label="Ke atas"><i class="fas fa-arrow-up"></i></button>
+
+  <script src="assets/js/member.js"></script>
+</body>
+</html>
